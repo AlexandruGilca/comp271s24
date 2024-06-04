@@ -3,7 +3,9 @@
  * following the instructions in Sakai. IF YOU DO NOT COMMIT THE CHANGES, IT IS POSSIBLE THAT
  * YOUR WORK MAY BE LOST AND YOU MAY HAVE TO START ALL OVER AGAIN.
  */
-public class DynamicArray {
+
+ 
+ public class DynamicArray {
 
    private String[] data;
 
@@ -26,12 +28,30 @@ public class DynamicArray {
 
    public void add(String string) {
         //make sure there is room in array data
-        if(this.position == this.data.lenght){ 
+        if(this.position == this.data.length){ 
             resize();
         }
             // Now array has room for more elements.
         this.data[this.position] = string;
         this.position++;    
-   }  // method add
+   } 
+   private void resize() {
+    String[] temp = new String[data.length*2];
+    for(int i=0 ; i<data.length ; i++) {
+        temp[i]=data[i];
+    }
+    data=temp;
+};
+    public int countOf() {
+        int[] countUniqie = new int[data.length];
+        for (int r = 0; r < data.length; r++) {
+            String current = data[r];
+            int count = 0;
+            boolean counted = false;
+            for (int j = 0; j <)
+        }
+    }
 
 } // class DynamicArray
+
+
