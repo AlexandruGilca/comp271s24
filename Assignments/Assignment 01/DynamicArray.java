@@ -61,8 +61,21 @@
                 }
             }
         }
-        System.out.println("The string: " + current + ", is present: " + count);
+        System.out.println("The string: " + current + ", is present: " + count + "times.");
         }
+    }
+
+    String searchString = "value"; //whatever value you want to check for duplicate
+    boolean exists = duplicateChecker(data, searchString)
+    System.out.println("String " + searchString + " exists in the array: " + exists);
+   
+    public static boolean duplicateChecker(String[] data, String searchString) {
+        for (String str : data) { // look for every string in the data array
+            if (str.equals(searchString)) { // if the string equals to the one you are searching, return true, otherwise false
+                return true;
+            }
+        }
+        return false;
     }
 
 } // class DynamicArray
