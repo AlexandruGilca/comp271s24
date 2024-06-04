@@ -66,7 +66,7 @@
     }
 
     String searchString = "value"; //whatever value you want to check for duplicate
-    boolean exists = duplicateChecker(data, searchString)
+    boolean exists = duplicateChecker(data, searchString);
     System.out.println("String " + searchString + " exists in the array: " + exists);
    
     public static boolean duplicateChecker(String[] data, String searchString) {
