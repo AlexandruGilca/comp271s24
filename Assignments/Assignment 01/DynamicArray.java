@@ -48,7 +48,20 @@
             String current = data[r];
             int count = 0;
             boolean counted = false;
-            for (int j = 0; j <)
+            for (int j = 0; j < r; j++) {
+                if (data[j].equals(current)) {
+                    counted = true;
+                    break;
+                }
+            }
+        if (!counted) {
+            for (string str : data) {
+                if (str.equals(current)) {
+                    count++
+                }
+            }
+        }
+        System.out.println("Value: " + current + ", countOf: " + count);
         }
     }
 
