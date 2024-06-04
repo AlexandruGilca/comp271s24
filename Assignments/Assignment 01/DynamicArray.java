@@ -43,25 +43,25 @@
     data=temp;
 };
     public int countOf() {
-        int[] countUniqie = new int[data.length];
-        for (int r = 0; r < data.length; r++) {
-            String current = data[r];
-            int count = 0;
-            boolean counted = false;
+        int[] countUniqie = new int[data.length]; //An array to count and store the count of each string
+        for (int r = 0; r < data.length; r++) { // for loop tells to look through every string in array
+            String current = data[r]; // gets the string from the array
+            int count = 0; // intaial count
+            boolean counted = false; // this block checks if the current string has been counted
             for (int j = 0; j < r; j++) {
                 if (data[j].equals(current)) {
                     counted = true;
-                    break;
+                    break; // if the reference from data array equals to the current array, then it has been counted and we can break the loop
                 }
             }
         if (!counted) {
-            for (string str : data) {
+            for (String str : data) {
                 if (str.equals(current)) {
-                    count++
+                    count++; // if it has not been counted then increase the counter
                 }
             }
         }
-        System.out.println("Value: " + current + ", countOf: " + count);
+        System.out.println("The string: " + current + ", is present: " + count);
         }
     }
 
