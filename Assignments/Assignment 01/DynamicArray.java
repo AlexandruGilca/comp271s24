@@ -42,8 +42,8 @@
     }
     data=temp;
 };
-    public int countOf() {
-        int[] countUniqie = new int[data.length]; //An array to count and store the count of each string
+    public void countOf() {
+        int[] countUnique = new int[data.length]; //An array to count and store the count of each string
         for (int r = 0; r < data.length; r++) { // for loop tells to look through every string in array
             String current = data[r]; // gets the string from the array
             int count = 0; // intaial count
