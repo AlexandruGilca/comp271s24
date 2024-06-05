@@ -5,7 +5,9 @@
  */
 
  
+
  public class DynamicArray {
+
 
    private String[] data;
 
@@ -15,6 +17,8 @@
    /*Constant with default size */
 
    private static final int DEFAULT_SIZE = 10;
+
+    public static void main(String[] args)
 
    public DynamicArray(int size) {
     this.data = new String[size];
@@ -35,35 +39,25 @@
         this.data[this.position] = string;
         this.position++;    
    } 
-   private void resize() {
-    String[] temp = new String[data.length*2];
-    for(int i=0 ; i<data.length ; i++) {
-        temp[i]=data[i];
+    private void resize() {
+        String[] temp = new String[data.length*2];
+        for(int i=0 ; i<data.length ; i++) {
+            temp[i]=data[i];
     }
-    data=temp;
+        data=temp;
 };
-    public void countOf() {
-        int[] countUnique = new int[data.length]; //An array to count and store the count of each string
-        for (int r = 0; r < data.length; r++) { // for loop tells to look through every string in array
-            String current = data[r]; // gets the string from the array
-            int count = 0; // intaial count
-            boolean counted = false; // this block checks if the current string has been counted
-            for (int j = 0; j < r; j++) {
-                if (data[j].equals(current)) {
-                    counted = true;
-                    break; // if the reference from data array equals to the current array, then it has been counted and we can break the loop
-                }
-            }
-        if (!counted) {
-            for (String str : data) {
-                if (str.equals(current)) {
-                    count++; // if it has not been counted then increase the counter
-                }
+    public void countOf(String word) {
+        int counter = 0;
+        for (String str : data) {
+            if (word.equals(str)) {
+                counter +=1;
             }
         }
-        System.out.println("The string: " + current + ", is present: " + count + "times.");
-        }
-    }
+        System.out.println("The string: " + word + ", is present: " + counter + "times.");
+
+
+
+        
 
     String searchString = "value";
    
@@ -80,5 +74,9 @@
     }
 
 } // class DynamicArray
+
+
+
+// create main method, then instantiate two dynamic array objs, put elements in, then apply methods,make sure to have duplicates - apply duplicate checker on object - nameOfObject.method
 
 
