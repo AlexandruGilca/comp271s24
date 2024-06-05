@@ -18,12 +18,14 @@
 
    private static final int DEFAULT_SIZE = 10;
 
+   //test out 
     public static void main(String[] args) {
         DynamicArray animals1 = new DynamicArray(3);
         animals1.add("dog");
         animals1.add("cat");
         animals1.add("dog");
         animals1.countOf("dog");
+        animals1.duplicateChecker("dog");
     }
 
    public DynamicArray(int size) {
@@ -46,17 +48,17 @@
         this.position++;    
    } 
     private void resize() {
-        String[] temp = new String[data.length*2];
-        for(int i=0 ; i<data.length ; i++) {
-            temp[i]=data[i];
+        String[] temp = new String[data.length*2]; //create a new temp array that is double the lenght of the initial data array
+        for(int i=0 ; i<data.length ; i++) { //for every element in data array, starting at 0 and inrementing until the end of the array
+            temp[i]=data[i]; //copy the element from data to the temp array
     }
-        data=temp;
+        data=temp; //rename
 }
     public void countOf(String word) {
-        int counter = 0;
-        for (String str : data) {
-            if (word.equals(str)) {
-                counter +=1;
+        int counter = 0; //start with a counter
+        for (String str : data) { // look in the data array
+            if (word.equals(str)) { // if the word you are searching exists in array
+                counter +=1; //increase coutnter by 1
             }
         }
         System.out.println("The string: " + word + ", is present: " + counter + " times.");
@@ -70,10 +72,10 @@
    
     public boolean duplicateChecker(String searchString) {
 
-        Boolean duplicate = false;
+        Boolean duplicate = false; //we assume false
         for (String str : data) { // look for every string in the data array
-            if (str.equals(searchString)) { // if the string equals to the one you are searching, return true, otherwise false
-                duplicate = true;
+            if (str.equals(searchString)) { // if the string equals to the one you are searching
+                duplicate = true; //return true
             }
         }
         System.out.println("String " + searchString + " exists in the array: " + duplicate);
