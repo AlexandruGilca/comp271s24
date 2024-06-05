@@ -18,7 +18,13 @@
 
    private static final int DEFAULT_SIZE = 10;
 
-    public static void main(String[] args)
+    public static void main(String[] args) {
+        DynamicArray animals1 = new DynamicArray(3);
+        animals1.add("dog");
+        animals1.add("cat");
+        animals1.add("dog");
+        animals1.countOf("dog");
+    }
 
    public DynamicArray(int size) {
     this.data = new String[size];
@@ -45,7 +51,7 @@
             temp[i]=data[i];
     }
         data=temp;
-};
+}
     public void countOf(String word) {
         int counter = 0;
         for (String str : data) {
@@ -53,15 +59,16 @@
                 counter +=1;
             }
         }
-        System.out.println("The string: " + word + ", is present: " + counter + "times.");
+        System.out.println("The string: " + word + ", is present: " + counter + " times.");
+    }
 
 
 
         
 
-    String searchString = "value";
+    //String searchString = "value";
    
-    public static boolean duplicateChecker(String[] data, String searchString) {
+    public boolean duplicateChecker(String searchString) {
 
         Boolean duplicate = false;
         for (String str : data) { // look for every string in the data array
